@@ -1,3 +1,8 @@
+/.project
+/spring-data-model/.project
+/spring-data-model/.classpath
+/.settings
+/.idea
 *.class
 
 # EA
