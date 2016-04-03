@@ -1,36 +1,23 @@
 package pl.spring.demo.entity;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
 public class Book implements Serializable {
 
     public static String TITLE_PROPERTY = "title";
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(nullable = false, length = 50)
     private String title;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "BOOK_AUTHOR",
-            joinColumns = {@JoinColumn(name = "BOOK_ID", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name = "AUTHOR_ID", nullable = false, updatable = false)})
     private Set<Author> authors = new HashSet<>();
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "book")
     private BookReview bookReview;
 
-    @ManyToOne
-	@JoinColumn(name="LIBRARY_ID", nullable=true)
     private Library library;
     
-    @Version
     private long version;
 
     // for hibernate

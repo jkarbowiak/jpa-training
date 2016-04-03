@@ -2,26 +2,16 @@ package pl.spring.demo.entity;
 
 import pl.spring.demo.type.PersonalData;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
 public class Author implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
 
-    @Column(nullable = true, length = 30)
     protected String nickName;
 
-    @Embedded
-    @AttributeOverrides({
-            @AttributeOverride(name = "firstName", column = @Column(name = "FIRST_NAME", nullable = false)),
-            @AttributeOverride(name = "lastName", column = @Column(name = "LAST_NAME", nullable = false))})
     protected PersonalData personalData;
 
-    @Version
     protected long version;
 
     // for hibernate

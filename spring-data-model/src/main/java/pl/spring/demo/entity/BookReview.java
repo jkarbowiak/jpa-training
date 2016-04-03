@@ -1,22 +1,13 @@
 package pl.spring.demo.entity;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name = "BOOK_REVIEW")
 public class BookReview implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Lob
-    @Column(nullable = false)
     private String content;
 
-    @OneToOne
-    @JoinColumn(name = "BOOK_FK", nullable = false, updatable = false)
     private Book book;
 
     // for hibernate
