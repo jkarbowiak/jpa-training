@@ -1,6 +1,5 @@
-/.project
-/spring-data-model/.project
-/spring-data-model/.classpath
+.project
+.classpath
 /.settings
 /.idea
 *.class
