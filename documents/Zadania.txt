@@ -1,0 +1,10 @@
+1. Mapowanie JPA
+- Wycheckować brancha "jpa-mapping"
+- Uruchomić "mvn clean install" na głównym projekcie.
+- Uzupełnić mapowanie JPA.
+
+2. Zapytania:
+- Wycheckować brancha "queries".
+- Uruchomić "mvn clean install" na głównym projekcie.
+- Sprawdzić, które testy nie działają.
+- Naprawić testy, implementując metody.
