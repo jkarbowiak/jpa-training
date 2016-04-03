@@ -12,7 +12,6 @@
     <modules>
         <module>spring-data-jpa</module>
         <module>spring-data-model</module>
-        <module>web</module>
     </modules>
 
     <properties>
