@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import pl.spring.demo.dao.BookDao;
 import pl.spring.demo.entity.Book;
@@ -17,7 +16,6 @@ import pl.spring.demo.to.BookTo;
 import pl.spring.demo.to.NewBookTo;
 
 @Service
-@Transactional(readOnly = true)
 public class BookServiceImpl implements BookService {
 
     private final BookMapper bookMapper;
@@ -41,7 +39,6 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    @Transactional(readOnly = false)
     public BookTo createBook(NewBookTo bookToSave) {
         Book bookEntity = bookMapper.mapNewBook(bookToSave);
         bookEntity = bookDao.save(bookEntity);
@@ -49,7 +46,6 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    @Transactional(readOnly = false)
     public BookTo updateBook(BookTo bookTo) {
         Book bookEntity = bookMapper.convertToEntity(bookTo);
         Book savedBookEntity = bookDao.update(bookEntity);
@@ -70,7 +66,6 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    @Transactional(readOnly = false)
     public void removeBookById(long bookIdToRemove) {
         bookDao.delete(bookIdToRemove);
     }

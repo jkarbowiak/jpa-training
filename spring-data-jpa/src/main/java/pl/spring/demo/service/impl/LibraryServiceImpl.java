@@ -3,8 +3,6 @@ package pl.spring.demo.service.impl;
 import java.util.Collection;
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +15,6 @@ import pl.spring.demo.service.LibraryService;
 import pl.spring.demo.to.LibraryTo;
 
 @Service
-@Transactional
 public class LibraryServiceImpl implements LibraryService{
 
 	private final LibraryDao libraryDao;
