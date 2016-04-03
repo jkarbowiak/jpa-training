@@ -8,6 +8,8 @@ import java.util.Set;
 @Entity
 public class Book implements Serializable {
 
+    public static String TITLE_PROPERTY = "title";
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

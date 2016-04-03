@@ -28,8 +28,8 @@ public class BookSearchCriteriaTo {
         return hasReview;
     }
 
-    public void setHasReview(Boolean hasSpoiler) {
-        this.hasReview = hasSpoiler;
+    public void setHasReview(Boolean hasReview) {
+        this.hasReview = hasReview;
     }
 
 
