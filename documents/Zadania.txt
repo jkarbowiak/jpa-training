@@ -2,9 +2,19 @@
 - Wycheckować brancha "jpa-mapping"
 - Uruchomić "mvn clean install" na głównym projekcie.
 - Uzupełnić mapowanie JPA.
+- Sprawdzić, czy build przechodzi.
 
 2. Zapytania:
 - Wycheckować brancha "queries".
 - Uruchomić "mvn clean install" na głównym projekcie.
 - Sprawdzić, które testy nie działają.
 - Naprawić testy, implementując metody.
+- Sprawdzić, czy build przechodzi.
+
+3. Transakcje
+- Wycheckować brancha "transactions"
+- Uruchomić "mvn clean install".
+- Sprawdzić, które testy nie działają.
+- Przeanalizować testy i ustalić, co jest bezpośrednią przyczyną błędu (dla wybranych testów).
+- Naprawić testy, dodając zarządzanie transakcjami.
+- Sprawdzić, czy build przechodzi.
