@@ -1,11 +1,10 @@
 package pl.spring.demo.to;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookTo {
-    private long id;
+    private Long id;
     private String title;
     private LibraryTo libraryTo;
     private long version;
